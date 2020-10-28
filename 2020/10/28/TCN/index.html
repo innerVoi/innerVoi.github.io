@@ -20,24 +20,22 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="来源： KDD-2020摘要&amp;emsp;&amp;emsp;给出如谷歌网页搜索日志的长时时间序列，我们应如何精确的预测他们的未来活动？&amp;emsp;&amp;emsp;文章提出了名为CUBECAST的流方法，用于捕捉张量流中基础的的趋势和季节性以及抽取动态变化中的多维关系。此方法有如下属性：(a)有效性：发现了趋势和季节性，并将它们的动态归纳为同时存在的非线性潜在空间；(b)自动性：不需要任何的参数调节和先验知识">
+  <meta name="description" content="来源：arXiv-2018摘要&amp;emsp;&amp;emsp;给出一个序列建模任务，应当使用哪一种架构（循环&#x2F;卷积）？&amp;emsp;&amp;emsp;经评估，结果展示一个简单的卷积架构对不同范围的任务和数据集比典型的如LSTM的循环网络表现更好。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Non-Linear Mining of Social Activities in Tensor Streams">
-<meta property="og:url" content="http://example.com/2020/10/21/Non-Linear-Mining-of-Social-Activities-in-Tensor-Streams-md/index.html">
+<meta property="og:title" content="An Empirical Evaluation of Generic Convolutional and Recurrent Networks for Sequence Modeling(TCN)">
+<meta property="og:url" content="http://example.com/2020/10/28/TCN/index.html">
 <meta property="og:site_name" content="innerVoi">
-<meta property="og:description" content="来源： KDD-2020摘要&amp;emsp;&amp;emsp;给出如谷歌网页搜索日志的长时时间序列，我们应如何精确的预测他们的未来活动？&amp;emsp;&amp;emsp;文章提出了名为CUBECAST的流方法，用于捕捉张量流中基础的的趋势和季节性以及抽取动态变化中的多维关系。此方法有如下属性：(a)有效性：发现了趋势和季节性，并将它们的动态归纳为同时存在的非线性潜在空间；(b)自动性：不需要任何的参数调节和先验知识">
+<meta property="og:description" content="来源：arXiv-2018摘要&amp;emsp;&amp;emsp;给出一个序列建模任务，应当使用哪一种架构（循环&#x2F;卷积）？&amp;emsp;&amp;emsp;经评估，结果展示一个简单的卷积架构对不同范围的任务和数据集比典型的如LSTM的循环网络表现更好。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/images/papers/non-linear_fig1.png">
-<meta property="og:image" content="http://example.com/images/papers/non-linear_fig2.png">
-<meta property="og:image" content="http://example.com/images/papers/non-linear_alg1.png">
-<meta property="article:published_time" content="2020-10-21T01:33:45.000Z">
-<meta property="article:modified_time" content="2020-10-28T03:27:18.833Z">
+<meta property="og:image" content="http://example.com/2020/10/28/TCN/figure1.png">
+<meta property="article:published_time" content="2020-10-28T03:25:17.000Z">
+<meta property="article:modified_time" content="2020-10-28T14:11:53.641Z">
 <meta property="article:author" content="innerVoi">
 <meta property="article:tag" content="time series">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/images/papers/non-linear_fig1.png">
+<meta name="twitter:image" content="http://example.com/2020/10/28/TCN/figure1.png">
 
-<link rel="canonical" href="http://example.com/2020/10/21/Non-Linear-Mining-of-Social-Activities-in-Tensor-Streams-md/">
+<link rel="canonical" href="http://example.com/2020/10/28/TCN/">
 
 
 <script id="page-configurations">
@@ -50,7 +48,7 @@
   };
 </script>
 
-  <title>Non-Linear Mining of Social Activities in Tensor Streams | innerVoi</title>
+  <title>An Empirical Evaluation of Generic Convolutional and Recurrent Networks for Sequence Modeling(TCN) | innerVoi</title>
   
 
 
@@ -166,7 +164,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/10/21/Non-Linear-Mining-of-Social-Activities-in-Tensor-Streams-md/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/10/28/TCN/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://avatars0.githubusercontent.com/u/37236971?s=400&u=0300f77846565f1d29ded156e3bd2f4baf6c41e2&v=4">
@@ -179,7 +177,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Non-Linear Mining of Social Activities in Tensor Streams
+          An Empirical Evaluation of Generic Convolutional and Recurrent Networks for Sequence Modeling(TCN)
         </h1>
 
         <div class="post-meta">
@@ -188,16 +186,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2020-10-21 09:33:45" itemprop="dateCreated datePublished" datetime="2020-10-21T09:33:45+08:00">2020-10-21</time>
+              <time title="创建时间：2020-10-28 11:25:17 / 修改时间：22:11:53" itemprop="dateCreated datePublished" datetime="2020-10-28T11:25:17+08:00">2020-10-28</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-10-28 11:27:18" itemprop="dateModified" datetime="2020-10-28T11:27:18+08:00">2020-10-28</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -224,8 +216,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2020/10/21/Non-Linear-Mining-of-Social-Activities-in-Tensor-Streams-md/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/10/21/Non-Linear-Mining-of-Social-Activities-in-Tensor-Streams-md/" itemprop="commentCount"></span>
+    <a title="valine" href="/2020/10/28/TCN/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/10/28/TCN/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -241,43 +233,36 @@
 
       
         <ul>
-<li>来源： KDD-2020<h3 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h3>&emsp;&emsp;给出如谷歌网页搜索日志的长时时间序列，我们应如何精确的预测他们的未来活动？<br>&emsp;&emsp;文章提出了名为CUBECAST的流方法，用于捕捉张量流中基础的的趋势和季节性以及抽取动态变化中的多维关系。此方法有如下属性：(a)有效性：发现了趋势和季节性，并将它们的动态归纳为同时存在的非线性潜在空间；(b)自动性：不需要任何的参数调节和先验知识就可以自动的识别和建模结构化的模式；(c)扩展性：对一个半无限的张量流收集，其增量和自适应的检测模式的移动点；<a id="more"></a>
-<h3 id="文章内容"><a href="#文章内容" class="headerlink" title="文章内容"></a>文章内容</h3><h4 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h4>&emsp;&emsp;预测张量流有两个难题：(a)可观察数据背后的多重因素；(b)随时间变化的模式：不仅要理解趋势而且要理解其动态的变化；<br>&emsp;&emsp;CUBECAST：可以同时捕获时间演变趋势和季节性以及张量流中的多个离散模式。<br><img src='/images/papers/non-linear_fig1.png' width='600px'>  </li>
-</ul>
-<ol>
-<li>长时趋势：figure1(a)展示了文章算法，它扫描最新张量的增量和捕捉非线性趋势，以实现长期预测。</li>
-<li>季节性：figure1(b)展示了从张量流中提取的季节特征。</li>
-<li>多元的动态模式：figure1(c)展示了06-08年五十个国家的CUBECAST聚类结果  </li>
+<li>来源：arXiv-2018<h3 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h3>&emsp;&emsp;给出一个序列建模任务，应当使用哪一种架构（循环/卷积）？<br>&emsp;&emsp;经评估，结果展示一个简单的卷积架构对不同范围的任务和数据集比典型的如LSTM的循环网络表现更好。<a id="more"></a>
+<h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3></li>
+<li>文章用TCN来代表卷积网络，结果展示TCNs在广泛的序列建模任务中表现优于循环结构baseline。</li>
+<li>TCNs表现出了更长的记忆力，一次更适合于需要长期历史信息的领域。</li>
+<li>TCN架构不仅比典型的循环结构更精确，而且更简单和清晰。<h3 id="Temporal-Convolutional-Networks"><a href="#Temporal-Convolutional-Networks" class="headerlink" title="Temporal Convolutional Networks"></a>Temporal Convolutional Networks</h3></li>
+<li>TCNs的特征：<ol>
+<li>架构中的卷积是因果卷积，意味着不会有信息从未来泄漏到现在。</li>
+<li>该结构可以接受任意长度的序列并将其映射到输出，如RNN一样。使用深度网络和扩展卷积探索如何建立一个非常长期有效的历史。</li>
 </ol>
-<p><img src='/images/papers/non-linear_fig2.png' width='500px'>  </p>
-<ol>
-<li>figure2(a)将美国和英国分为一组因为它们有相似的动态性，包括对“gap”的强季节性</li>
-<li>figure2(b)显示了“h&amp;m”搜索计数在意大利大幅增长的情况下搜索计数时刻之间的模式差异。通过切换一个即将到来的模式模型，它有效地预测张量流。</li>
-</ol>
-<h4 id="相关工作"><a href="#相关工作" class="headerlink" title="相关工作"></a>相关工作</h4><p>&emsp;&emsp;时间序列的传统方法如：AR、linear dynamical systems(LDS)、kalman filter(KF)及其扩展等；RegimeCast和OrbitMap是实时预报方法，可以捕捉多维事件流中的潜在非线性动态性，但是这些方法不能在流中建模季节性模式；LSTM、GRUs；<br>&emsp;&emsp;对于挖掘高阶数据来说，<strong>张量分解</strong>是一个理解数据潜在因素的有力技术；AutoCyclone提供了稳健的因子分解，将季节叠加时间序列视为张量，可用于从时间序列中分离基本趋势、季节性和异常值。CompCube、PowerCast；</p>
-<h4 id="CUBECAST"><a href="#CUBECAST" class="headerlink" title="CUBECAST"></a>CUBECAST</h4><ul>
-<li>三个能力：非线性潜在动态性；季节性；张量流的共同演化模式；</li>
-<li><strong><em>单一位置潜在的非线性动态性</em></strong><ul>
-<li>活动的时间依赖性可以描述为<br>$z_{t+1}=Az_{t}+Bz_{t}\bigotimes z_{t}$<br>$e_{t}=Wz_{t}$<br>其中$\bigotimes$表示两个向量外积；  </li>
+</li>
+<li>TCN比WaveNet更简单，没有skip连接，上下文叠加等<h4 id="序列模型-sequence-model"><a href="#序列模型-sequence-model" class="headerlink" title="序列模型(sequence model)"></a>序列模型(sequence model)</h4><ul>
+<li>学习目标是最小化实际输出和预测值之间的期望损失  <h4 id="因果卷积-causal-convolutions"><a href="#因果卷积-causal-convolutions" class="headerlink" title="因果卷积(causal convolutions)"></a>因果卷积(causal convolutions)</h4></li>
+<li>TCN基于两个原则：（1）网络的输入输出有相同的长度；（2）没有未来的信息泄漏到过去</li>
+<li>For(1)：RCN采用一维全卷积网络，zero padding的长度等于kernel size - 1，以保持随后的层和之前的层有相同的长度。</li>
+<li>For(2)：TCN使用因果卷积。</li>
+<li>TCN = 1D FCN + causal convolutions.</li>
+<li>主要的缺点：为了实现一个长期有效的历史size，需要一个极深的网络或者极大的滤波器，这在实际中是不可行的  <h4 id="扩展卷积-dilated-convolutions"><a href="#扩展卷积-dilated-convolutions" class="headerlink" title="扩展卷积(dilated convolutions)"></a>扩展卷积(dilated convolutions)</h4></li>
+<li>实现一个指数级变大的感受野</li>
+<li>$F(s)=(x\ast _{d}f)(s)=\sum_{i=0}^{k-1}f(i)\cdot X_{S-d\cdot i}$</li>
+<li>$d$是扩展因子；$k$是filter size；$s-d\cdot i$是过去的方向；</li>
+<li>使用更大的扩展使得顶层的输出可以表示一个更宽泛的输入，从而有效的扩张卷积网络的感受野。</li>
+<li><strong>两个提高感受野的方法</strong>：(1)选择更大的过滤大小k；(2)增加扩展因子d；  <h4 id="残差连接-residual-connections"><a href="#残差连接-residual-connections" class="headerlink" title="残差连接(residual connections)"></a>残差连接(residual connections)</h4></li>
+<li>$o=Axtivation(x+F(x))$</li>
+<li>TCN模型中，使用一个常用的残差模块代替卷积层。在残差块中，TCN有两层因果卷积和非线性，因此使用Relu；归一化上使用weight normalization；此外，在每一次扩展卷积后添加dropout正则。</li>
+<li>在标准的ResNet中输入被直接加入残差函数的输出；在TCN中，输入和输出可能有不同的宽度；</li>
+<li>考虑输入输出宽度的不同，我们使用一个额外的1X1卷积来确保元素加法$\bigoplus$收到相同尺寸的张量；</li>
 </ul>
 </li>
-<li><strong><em>潜在的季节动态性</em></strong><ul>
-<li>通过扩展基础模型来建模季节/周期模式，具体地，作者希望为季节性定义另一种潜在空间可以随时间与线性和非线性活动进行交互。<br>$\begin{bmatrix}<br>z_{t+1}\\<br>v_{t+1}<br>\end{bmatrix}=A\begin{bmatrix}<br>z_{t}\\<br>v_{t}<br>\end{bmatrix}+B\begin{bmatrix}<br>z_{t}\\<br>v_{t}<br>\end{bmatrix}\bigotimes\begin{bmatrix}<br>z_{t}\\<br>v_{t}<br>\end{bmatrix}$<br>$e_{t}=Wz_{t}+U(v_{t}\bigcirc S_{t\quad mod\quad p})$<br>其中$\bigcirc$表示向量对应位置元素的乘积</li>
+<li><strong>figure1</strong>：TCN<br><div style="width:1000px;margin:auto"><img src="figure1.png" alt="TCN"></li>
 </ul>
-</li>
-<li><strong><em>有多个位置的完整模型</em></strong><ul>
-<li>假设不同的位置有不同的活动，我们应当如何描述在庞大张量流中随时间变化的系统</li>
-<li>Definition<ul>
-<li>single regime parameter set</li>
-<li>full parameter set</li>
-<li>regime assignment set<h4 id="算法优化"><a href="#算法优化" class="headerlink" title="算法优化"></a>算法优化</h4></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>有效和精确的预测未来模型仍然有两个问题：(a)当自适应的产生和切换体制时能够及时的预测未来事件(b)自动挖掘和估计多元非线性动态性<br><img src='/images/papers/non-linear_alg1.png' width='500px'>  </li>
-</ul>
-<p>&lt;未完待续…&gt;</p>
 
     </div>
 
@@ -296,13 +281,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/10/19/The%20First/" rel="prev" title="The First">
-      <i class="fa fa-chevron-left"></i> The First
+    <a href="/2020/10/26/LST-Net/" rel="prev" title="Long- and Short-Term Time-series network(LSTNet)">
+      <i class="fa fa-chevron-left"></i> Long- and Short-Term Time-series network(LSTNet)
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/10/26/LST-Net/" rel="next" title="Long- and Short-Term Time-series network(LSTNet)">
-      Long- and Short-Term Time-series network(LSTNet) <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -362,7 +344,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%91%98%E8%A6%81"><span class="nav-number">1.</span> <span class="nav-text">摘要</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E7%AB%A0%E5%86%85%E5%AE%B9"><span class="nav-number">2.</span> <span class="nav-text">文章内容</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BC%95%E8%A8%80"><span class="nav-number">2.1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E5%B7%A5%E4%BD%9C"><span class="nav-number">2.2.</span> <span class="nav-text">相关工作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CUBECAST"><span class="nav-number">2.3.</span> <span class="nav-text">CUBECAST</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E4%BC%98%E5%8C%96"><span class="nav-number">2.4.</span> <span class="nav-text">算法优化</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%91%98%E8%A6%81"><span class="nav-number">1.</span> <span class="nav-text">摘要</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%95%E8%A8%80"><span class="nav-number">2.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Temporal-Convolutional-Networks"><span class="nav-number">3.</span> <span class="nav-text">Temporal Convolutional Networks</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BA%8F%E5%88%97%E6%A8%A1%E5%9E%8B-sequence-model"><span class="nav-number">3.1.</span> <span class="nav-text">序列模型(sequence model)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9B%A0%E6%9E%9C%E5%8D%B7%E7%A7%AF-causal-convolutions"><span class="nav-number">3.2.</span> <span class="nav-text">因果卷积(causal convolutions)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%89%A9%E5%B1%95%E5%8D%B7%E7%A7%AF-dilated-convolutions"><span class="nav-number">3.3.</span> <span class="nav-text">扩展卷积(dilated convolutions)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%AE%8B%E5%B7%AE%E8%BF%9E%E6%8E%A5-residual-connections"><span class="nav-number">3.4.</span> <span class="nav-text">残差连接(residual connections)</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
