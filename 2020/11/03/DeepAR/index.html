@@ -20,26 +20,22 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="来源：SIGIR-2018摘要&amp;emsp;&amp;emsp;现实应用中的时序数据常常涉及长期和短期的混合模式，而传统的如自回归模型和高斯过程的模型可能无法做到。&amp;emsp;&amp;emsp;文章提出LSTNet，采用CNN和RNN在变量间抽取短期局部依赖模式并为时序的趋势探索长期模式；此外，作者利用传统的自回归模型来解决神经网络scale不敏感的问题。">
+  <meta name="description" content="来源：arXiv-2019摘要&amp;emsp;&amp;emsp;概率预测，通过时间序列给出的过去预测其未来的概率分布，是优化商业过程的关键。如：在正确的时间和地点预测可用的库存是至关重要的。文章提出一种基于在大量相关时间序列上训练一个自回归循环网络模型的精确概率预测方法DeepAR。在多个真实数据集上测试，准确度较其他先进方法提升约15%。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Long- and Short-Term Time-series network(LSTNet)">
-<meta property="og:url" content="http://example.com/2020/10/26/LST-Net/index.html">
+<meta property="og:title" content="DeepAR">
+<meta property="og:url" content="http://example.com/2020/11/03/DeepAR/index.html">
 <meta property="og:site_name" content="innerVoi">
-<meta property="og:description" content="来源：SIGIR-2018摘要&amp;emsp;&amp;emsp;现实应用中的时序数据常常涉及长期和短期的混合模式，而传统的如自回归模型和高斯过程的模型可能无法做到。&amp;emsp;&amp;emsp;文章提出LSTNet，采用CNN和RNN在变量间抽取短期局部依赖模式并为时序的趋势探索长期模式；此外，作者利用传统的自回归模型来解决神经网络scale不敏感的问题。">
+<meta property="og:description" content="来源：arXiv-2019摘要&amp;emsp;&amp;emsp;概率预测，通过时间序列给出的过去预测其未来的概率分布，是优化商业过程的关键。如：在正确的时间和地点预测可用的库存是至关重要的。文章提出一种基于在大量相关时间序列上训练一个自回归循环网络模型的精确概率预测方法DeepAR。在多个真实数据集上测试，准确度较其他先进方法提升约15%。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/2020/10/26/LST-Net/figure1.png">
-<meta property="og:image" content="http://example.com/2020/10/26/LST-Net/figure2.png">
-<meta property="og:image" content="http://example.com/2020/10/26/LST-Net/table1.png">
-<meta property="og:image" content="http://example.com/2020/10/26/LST-Net/figure3.png">
-<meta property="og:image" content="http://example.com/2020/10/26/LST-Net/table2.png">
-<meta property="article:published_time" content="2020-10-26T08:45:22.000Z">
-<meta property="article:modified_time" content="2020-12-17T14:12:07.284Z">
+<meta property="og:image" content="http://example.com/2020/11/03/DeepAR/figure2.png">
+<meta property="article:published_time" content="2020-11-03T02:51:14.000Z">
+<meta property="article:modified_time" content="2020-11-03T09:23:42.354Z">
 <meta property="article:author" content="innerVoi">
 <meta property="article:tag" content="time series">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2020/10/26/LST-Net/figure1.png">
+<meta name="twitter:image" content="http://example.com/2020/11/03/DeepAR/figure2.png">
 
-<link rel="canonical" href="http://example.com/2020/10/26/LST-Net/">
+<link rel="canonical" href="http://example.com/2020/11/03/DeepAR/">
 
 
 <script id="page-configurations">
@@ -52,7 +48,7 @@
   };
 </script>
 
-  <title>Long- and Short-Term Time-series network(LSTNet) | innerVoi</title>
+  <title>DeepAR | innerVoi</title>
   
 
 
@@ -168,7 +164,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/10/26/LST-Net/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/11/03/DeepAR/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://avatars0.githubusercontent.com/u/37236971?s=400&u=0300f77846565f1d29ded156e3bd2f4baf6c41e2&v=4">
@@ -181,7 +177,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Long- and Short-Term Time-series network(LSTNet)
+          DeepAR
         </h1>
 
         <div class="post-meta">
@@ -190,16 +186,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2020-10-26 16:45:22" itemprop="dateCreated datePublished" datetime="2020-10-26T16:45:22+08:00">2020-10-26</time>
+              <time title="创建时间：2020-11-03 10:51:14 / 修改时间：17:23:42" itemprop="dateCreated datePublished" datetime="2020-11-03T10:51:14+08:00">2020-11-03</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-12-17 22:12:07" itemprop="dateModified" datetime="2020-12-17T22:12:07+08:00">2020-12-17</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -226,8 +216,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2020/10/26/LST-Net/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/10/26/LST-Net/" itemprop="commentCount"></span>
+    <a title="valine" href="/2020/11/03/DeepAR/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/11/03/DeepAR/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -243,69 +233,25 @@
 
       
         <ul>
-<li>来源：SIGIR-2018<h3 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h3>&emsp;&emsp;现实应用中的时序数据常常涉及长期和短期的混合模式，而传统的如自回归模型和高斯过程的模型可能无法做到。<br>&emsp;&emsp;文章提出LSTNet，采用CNN和RNN在变量间抽取短期局部依赖模式并为时序的趋势探索长期模式；此外，作者利用传统的自回归模型来解决神经网络scale不敏感的问题。<a id="more"></a>
-<h3 id="文章内容"><a href="#文章内容" class="headerlink" title="文章内容"></a>文章内容</h3><h4 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h4></li>
-<li><p><strong>figure1</strong>：高速公路每小时的占用率<br><div style="width:500px; margin:auto"><img src="figure1.png" alt="highway">  </p>
-</li>
-<li><p><strong>Recurrent-Skip</strong>：一种新的递归结构，被设计用于捕获非常长期的依赖模式，并使优化更加容易（利用输入时间序列信号的周期特性）</p>
-</li>
-<li>LSTNet在非线性神经网络部分加入了传统的自回归线性模型，使非线性深度学习模型对违背尺度变化的时间序列具有更强的鲁棒性。</li>
-<li><strong>figure2</strong>：LSTNet的网络结构<br><div style="width:800px; margin:auto"><img src="figure2.png" alt="LSTNet">  </li>
-</ul>
-<h4 id="相关背景"><a href="#相关背景" class="headerlink" title="相关背景"></a>相关背景</h4><p>&emsp;&emsp;ARIMA，由于计算量大，很少用于高维多变量时间序列预测；VAR，忽略输出变量的依赖性，将AR模型扩展到多变量。但其模型的容量随着时间窗的尺寸线性增长，随着变量的数量二次增长，这意味着当处理长期模式时，增长起来的大模型易于过拟合；SVR;Ridge Regression;LASSO;尽管如此，像VARs一样，这些线性模型可能无法捕获多变量信号之间复杂的非线性关系。<br>&emsp;&emsp;高斯过程(Gaussian Processes)是一种非参数方法建模分布在连续区域的函数。GP可以用于时序任务中，也可以用于Bayesian函数的先验。然而的高斯过程也带来了高代价的计算复杂度，用于多变量时序预测的高斯过程有着观测值立方的复杂度，由于其核矩阵的矩阵反转。</p>
-<h4 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h4><ul>
-<li>旨在于用滚动预测模式来预测未来的一系列信号；多数情况下，预测任务的horizon由具体需求和环境来决定。<h5 id="卷积部分"><a href="#卷积部分" class="headerlink" title="卷积部分"></a>卷积部分</h5></li>
-<li>LSTNet的第一层是一个没有池化的卷积网络，用于抽取时间维度的短期模式和变量间的局部依赖；卷积层由若干个宽为$\omega$，高为n的多个过滤器组成（高与变量的数目相同）。第k个过滤器经由输入矩阵X得到$h_{k}=RELU(W_{k}\ast X+b_{k})$，其中*表示卷积操作。<br>&emsp;&emsp;使每个长度为T的输出$h_{k}$在输入矩阵X的左边进行零填充；卷积层输出的尺寸为$d_{c} X T$，$d_{c}$为过滤器的数量。<h5 id="循环部分"><a href="#循环部分" class="headerlink" title="循环部分"></a>循环部分</h5></li>
-<li>卷积层的输出同时送入Recurrent and Recurrent-skip，Recurrent是一个带有GRU的循环层并使用RELU函数作为隐层的更新激活函数；</li>
-<li>循环单元在时间t的隐状态：  <ul>
-<li>$r_{t}=\sigma(x_{t}W_{xr}+h_{t-1}W_{hr}+b_{r})$  </li>
-<li>$u_{t}=\sigma(x_{t}W_{xu}+h_{t-1}W_{hu}+b_{u})$  </li>
-<li>$c_{t}=RELU(x_{t}W_{xc}+r_{t}\bigodot(h_{t-1}W_{hc})+b_{c})$  </li>
-<li>$h_{t}=(1-u_{t})\bigodot h_{t-1}+u_{t}\bigodot c_{t}$</li>
-</ul>
-</li>
-</ul>
-<p>&emsp;&emsp;$\bigodot$表示向量对应位置元素的乘积</p>
-<ul>
-<li>Recurrent-skip<ul>
-<li>由于梯度消失的原因，GRU和LSTM通常难以在实际中捕捉到非常长期的关联，文章利用现实集中的周期模式提出一个recurrent-skip来缓解这个问题。扩展信息流的时间跨度，从而简化优化过程。具体的，在当前隐藏单元和相同阶段的临近周期之间建立跳跃链接。</li>
-<li>$r_{t}=\sigma(x_{t}W_{xr}+h_{t-p}W_{hr}+b_{r})$</li>
-<li>$u_{t}=\sigma(x_{t}W_{xu}+h_{t-p}W_{hu}+b_{u})$</li>
-<li>$c_{t}=RELU(x_{t}W_{xc}+r_{t}\bigodot(h_{t-p}W_{hc})+b_{c})$</li>
-<li>$h_{t}=(1-u_{t})\bigodot h_{t-p}+u_{t}\bigodot c_{t}$</li>
-</ul>
-</li>
-</ul>
-<p>&emsp;&emsp;$p$表示跳跃的隐藏单元数目；  </p>
-<ul>
-<li>文章使用一个dense layer来结合recurrent and recurrent-skip的输出<ul>
-<li>$h_{t}^{D}=W^{R}h_{t}^{R}+\sum_{i=0}^{p-1}W_{i}^{S}h_{t-i}^{S}+b$</li>
-<li>$h_{t}^{D}$表示神经网络在时间t时刻的预测结果  </li>
-</ul>
-</li>
-</ul>
-<h5 id="时间注意力层"><a href="#时间注意力层" class="headerlink" title="时间注意力层"></a>时间注意力层</h5><ul>
-<li>recurrent-skip需要一个预定义的超参数p，这不利于非季节性的时间序列预测或周期长度动态变化的的时序问题。故引入注意力机制，在输入矩阵的每个窗口位置学习隐藏表示的权重组合。$\alpha_{t}=AttnScore(H_{t}^{R},h_{t-1}^{R})$</li>
-<li>时间注意力层的最终输出是加权上下文向量$c_{t}=H_{t}\alpha_{t}$和最后一个窗口隐藏表示$h_{t-1}^{R}$以及一个线性投影操作的串联。$h_{t}^{D}=W[c_{t};h_{t-1}^{R}]+b.$<h5 id="自回归部分"><a href="#自回归部分" class="headerlink" title="自回归部分"></a>自回归部分</h5></li>
-<li>由于卷积和循环部分的非线性特质，神经网络模型的一个主要缺点是输出的scale对于输入的scale不敏感。在实际数据集中，输入信号的scale不断地非周期性变化，显著的降低了神经网络模型的预测精度。</li>
-<li>LSTNet的最终预测被分解为一个主要关注局部规模的线性部分和一个包含循环模式的非线性部分。文章使用经典的AR模型作为线性成分</li>
-<li><strong>AR model</strong>：$h_{t,i}^{L}=\sum_{k=0}^{q^{ar}-1}W_{k}^{ar}y_{t-k,i}+b^{ar}$</li>
-<li>LSTNet的最终预测结果通过整合神经网络和AR部分的输出得到：$\hat{Y}_{t}=h_{t}^{D}+h_{t}^{L}$</li>
-<li><strong>目标函数</strong>：$minimize_{\theta}\sum_{t\in \Omega_{Train}}\begin{Vmatrix}<br>Y_{t}-\hat{Y}_{t-h}<br>\end{Vmatrix}_{F}^{2}$<h4 id="评价"><a href="#评价" class="headerlink" title="评价"></a>评价</h4></li>
-<li>包括LSTNet在内使用了九种方法，四个基准数据集；</li>
-<li>三个评价指标：RSE,RMSE,CORR</li>
-<li>四个数据集：<ol>
-<li>traffic：加利福尼亚州旧金山大湾区2015-2016年48个月的高速交通占有率(0-1)</li>
-<li>solar-energy：2006年每10分钟从阿拉巴马州的137个光伏电站取样一次</li>
-<li>electricity：2012-2014年321个客户每十五分钟记录的电力消耗，将其转换为每小时消耗</li>
-<li>exchange-rate：1990年至2016年澳大利亚、英国、加拿大、瑞士、中国、日本、新西兰、新加坡等8个国家的日汇率。</li>
+<li>来源：arXiv-2019<h3 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h3>&emsp;&emsp;概率预测，通过时间序列给出的过去预测其未来的概率分布，是优化商业过程的关键。如：在正确的时间和地点预测可用的库存是至关重要的。文章提出一种基于在大量相关时间序列上训练一个自回归循环网络模型的<strong>精确概率预测方法DeepAR</strong>。在多个真实数据集上测试，准确度较其他先进方法提升约15%。<a id="more"></a>
+<h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3>&emsp;&emsp;DeepAR，一种基于自回归循环网络的预测方法，从数据集所有时间序列的历史数据中学习一个全局的模型。</li>
+<li>文章的两个贡献：<ol>
+<li>提出了一个用于概率预测的RNN，整合了一个用于计数的负二项似然，以及一个当时间序列的magnitudes广泛变化的时候的特殊对策。</li>
+<li>在若干真实数据集上经验性的证明了该模型对一众输入特征可以得到精确的概率预测；展现了现代深度学习方法可以有效的应对概率预测问题，这与该领域普遍的观点和结果形成了对比。 </li>
 </ol>
 </li>
-<li><p>所有数据集按时序划分训练集、验证集、测试集为60%-20%-20%；<br><div style="width:500px; margin:auto"><img src="table1.png" alt="datasets">  </p>
+<li>除了比先前的方法能提供更好的预测精度之外，文章提出的方法与典型和其他全局方法相比仍有一众的优点：<ol>
+<li>随着模型根据时间序列学习季节性行为和给定协变量的依赖时，最小的手动特征工程被需要以捕捉复杂、依赖于组的行为。</li>
+<li>DeepAR以蒙特卡罗样本的形式进行概率预测，可用于计算预测范围内所有子区间的一致分位数估计。</li>
+<li>通过学习相似项，我们的方法可以对有很少或者没有历史的项进行预测，而传统的单一预测方法不可以。</li>
+<li>方法不假设高斯噪声，但可以包含广泛的似然函数，允许用户为数据的统计属性选择合适的项。</li>
+</ol>
 </li>
-<li><p><strong>figure3</strong>：四个数据集的自相关图<br><div style="width:500px; margin:auto"><img src="figure3.png" alt="datasets"></p>
-</li>
-<li><p><strong>table2</strong>：各种方法的效果<br><div style="width:1000px; margin:auto"><img src="table2.png" alt="datasets"></p>
+<li>特别在需求预测领域，人们经常面临高度不稳定的、间歇的、突发的数据，这违背了许多典型技巧的核心假设，如高斯误差、平稳性或时间序列的同方差性。</li>
+<li>两个主要特征使预测设置不同：<ol>
+<li>在概率预测中，人们感兴趣的是在下游决策系统中使用的完整的预测分布，而不是单一的最佳实现。</li>
+<li>为了获得(无界的)计数数据的精确分布，我们使用负二项似然，它提高了准确性，但阻止我们直接应用标准数据标准化技术<h3 id="模型"><a href="#模型" class="headerlink" title="模型"></a>模型</h3><div style="width:800px; margin:auto"><img src="figure2.png" alt="figure2"></li>
+</ol>
 </li>
 </ul>
 
@@ -326,12 +272,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/10/21/Non-Linear-Mining-of-Social-Activities-in-Tensor-Streams-md/" rel="prev" title="Non-Linear Mining of Social Activities in Tensor Streams">
-      <i class="fa fa-chevron-left"></i> Non-Linear Mining of Social Activities in Tensor Streams
+    <a href="/2020/10/28/TCN/" rel="prev" title="An Empirical Evaluation of Generic Convolutional and Recurrent Networks for Sequence Modeling(TCN)">
+      <i class="fa fa-chevron-left"></i> An Empirical Evaluation of Generic Convolutional and Recurrent Networks for Sequence Modeling(TCN)
     </a></div>
       <div class="post-nav-item">
-    <a href="/2020/10/28/TCN/" rel="next" title="An Empirical Evaluation of Generic Convolutional and Recurrent Networks for Sequence Modeling(TCN)">
-      An Empirical Evaluation of Generic Convolutional and Recurrent Networks for Sequence Modeling(TCN) <i class="fa fa-chevron-right"></i>
+    <a href="/2020/11/16/Prophet/" rel="next" title="Prophet简述">
+      Prophet简述 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -392,7 +338,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%91%98%E8%A6%81"><span class="nav-number">1.</span> <span class="nav-text">摘要</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E7%AB%A0%E5%86%85%E5%AE%B9"><span class="nav-number">2.</span> <span class="nav-text">文章内容</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BC%95%E8%A8%80"><span class="nav-number">2.1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E8%83%8C%E6%99%AF"><span class="nav-number">2.2.</span> <span class="nav-text">相关背景</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A1%86%E6%9E%B6"><span class="nav-number">2.3.</span> <span class="nav-text">框架</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%8D%B7%E7%A7%AF%E9%83%A8%E5%88%86"><span class="nav-number">2.3.1.</span> <span class="nav-text">卷积部分</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%BE%AA%E7%8E%AF%E9%83%A8%E5%88%86"><span class="nav-number">2.3.2.</span> <span class="nav-text">循环部分</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%97%B6%E9%97%B4%E6%B3%A8%E6%84%8F%E5%8A%9B%E5%B1%82"><span class="nav-number">2.3.3.</span> <span class="nav-text">时间注意力层</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%87%AA%E5%9B%9E%E5%BD%92%E9%83%A8%E5%88%86"><span class="nav-number">2.3.4.</span> <span class="nav-text">自回归部分</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%84%E4%BB%B7"><span class="nav-number">2.4.</span> <span class="nav-text">评价</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%91%98%E8%A6%81"><span class="nav-number">1.</span> <span class="nav-text">摘要</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%95%E8%A8%80"><span class="nav-number">2.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A8%A1%E5%9E%8B"><span class="nav-number">3.</span> <span class="nav-text">模型</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
